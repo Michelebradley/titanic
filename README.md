@@ -48,6 +48,20 @@ When this is called using python score_model.py in the command line, this will i
 3. Critical Thinking (3 points total)
 Modify this ReadMe file to answer the following questions directly in place.
 	1) Kaggle changes links/ file locations/login process/ file content
+
+Kaggle changes links: Should not have an effect since using kaggle api. Their website link does not matter.
+Kaggle changes file locations: Modify line if "titanic" file name changes os.system('kaggle competitions download -c "titanic"')
+Kaggle change login process: Modify pull_data.py if the API login process changes
+Kaggle changes file content: Depends on what changes. If file name changes, we have to modify the names that are being pulled in train_model.py and score_model.py. If column name changes, then changes become more complex.
+
 	2) We run out of space on HD / local permissions issue - can't save files
+	
+Use instead, a cloud based service, such as Google Collab.
+	
 	3) Someone updated python packages and there is unintended effect (functions retired or act differently)
+	
+Modifications will take time. Will need to update the requirements.txt file as well as any functions that are causing complications.
+
 	4) Docker issues - lost internet within docker due to some ip binding to vm or local routing issues( I guess this falls under lost internet, but I am talking more if docker is the cause rather then ISP)
+
+Docker issues might require re-building or encouraging use of code in local environment from github.
